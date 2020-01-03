@@ -1,21 +1,6 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Contatos do Bene</span>
-    <mat-form-field class="inputsearch" style="right: 0px;">
-      <input
-        matInput
-        placeholder="Buscar contato..."
-        (input)="doSearch($event)"
-      />
-    </mat-form-field>
-  </mat-toolbar-row>
-  <button
-    mat-fab
-    color="primary"
-    style="position: fixed; bottom:10px; right:10px;"
-  ></button>
-</mat-toolbar>
-
+<app-header></app-header>
+<app-search (searchInputEvent)="filterContacts($event)"></app-search>
 <section class="container">
-  <mat-action-list> </mat-action-list>
+  <app-list [contacts]="filteredContacts"></app-list>
 </section>
+<app-form></app-form>
