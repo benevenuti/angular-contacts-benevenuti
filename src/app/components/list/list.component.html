@@ -1,3 +1,13 @@
 <mat-action-list>
-  <span *ngFor="let contact of contacts; index as i">{{ contact.name }}</span>
+  <span *ngFor="let contact of contacts; index as i">
+    <mat-icon matPrefix>face</mat-icon>
+    {{ contact.name }} - {{ contact.email }} -
+    {{ contact.tel }}
+    <button mat-icon-button color="primary" (click)="doEdit(contact)">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" (click)="doDelete(contact)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </span>
 </mat-action-list>

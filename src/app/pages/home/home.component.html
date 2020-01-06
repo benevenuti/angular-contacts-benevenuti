@@ -1,6 +1,8 @@
 <app-header></app-header>
 <app-search (searchInputEvent)="filterContacts($event)"></app-search>
 <section class="container">
-  <app-list [contacts]="filteredContacts"></app-list>
+  <app-form
+    (alterContactsEvent)="alteredContactListener($event)"
+    [contacts]="filteredContacts"
+  ></app-form>
 </section>
-<app-form></app-form>

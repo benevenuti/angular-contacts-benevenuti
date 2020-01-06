@@ -1,0 +1,51 @@
+<div mat-dialog-content [formGroup]="form" class="contactForm">
+  <mat-form-field appearance="outline" class="inputInfo">
+    <mat-label>Nome</mat-label>
+    <input
+      type="text"
+      formControlName="name"
+      [errorStateMatcher]="matcher"
+      matInput
+      placeholder="Nome completo"
+      required
+    />
+    <mat-icon matSuffix>account_box</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inputInfo">
+    <mat-label>E-Mail</mat-label>
+    <input
+      type="email"
+      formControlName="email"
+      [errorStateMatcher]="matcher"
+      matInput
+      placeholder="E-Mail"
+      required
+    />
+    <mat-icon matSuffix>contact_mail</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="inputInfo">
+    <mat-label>Celular</mat-label>
+    <input
+      type="tel"
+      formControlName="tel"
+      [errorStateMatcher]="matcher"
+      matInput
+      placeholder="Telefone Celular"
+      class="inputInfo"
+      required
+    />
+    <mat-icon matSuffix>contact_phone</mat-icon>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions align="center">
+  <button mat-button (click)="close()">
+    <mat-icon class="redIcon" matPrefix>close</mat-icon>
+    Cancelar
+  </button>
+  <button mat-button (click)="save()" [disabled]="!form.valid" cdkFocusInitial>
+    Salvar
+    <mat-icon class="greenIcon" matSuffix>check</mat-icon>
+  </button>
+</div>

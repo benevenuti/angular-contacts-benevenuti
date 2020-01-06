@@ -1,25 +1,13 @@
-<mat-nav-list class="contactForm">
-  <mat-form-field appearance="outline" class="inputInfo">
-    <mat-label>Nome</mat-label>
-    <input matInput placeholder="Nome completo" required />
-    <mat-icon matSuffix>account_box</mat-icon>
-  </mat-form-field>
-
-  <mat-form-field appearance="outline" class="inputInfo">
-    <mat-label>E-Mail</mat-label>
-    <input type="email" matInput placeholder="E-Mail" required />
-    <mat-icon matSuffix>contact_mail</mat-icon>
-  </mat-form-field>
-
-  <mat-form-field appearance="outline" class="inputInfo">
-    <mat-label>Celular</mat-label>
-    <input
-      type="tel"
-      matInput
-      placeholder="Telefone Celular"
-      class="inputInfo"
-      required
-    />
-    <mat-icon matSuffix>contact_phone</mat-icon>
-  </mat-form-field>
-</mat-nav-list>
+<app-list
+  [contacts]="contacts"
+  (editContactEvent)="onEditContactEvent($event)"
+  (deleteContactEvent)="onDeleteContactEvent($event)"
+></app-list>
+<button
+  mat-fab
+  color="primary"
+  style="position: fixed; bottom:10px; right:10px;"
+  (click)="openDialog()"
+>
+  <mat-icon matSuffix>add</mat-icon>
+</button>

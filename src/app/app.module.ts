@@ -2,6 +2,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 // App básico
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -12,7 +13,11 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
 import { MatDialogModule } from "@angular/material/dialog";
-import { MatInputModule } from "@angular/material";
+import {
+  MatInputModule,
+  ErrorStateMatcher,
+  ShowOnDirtyErrorStateMatcher
+} from "@angular/material";
 import { MatFormFieldModule } from "@angular/material/form-field";
 // Components do App
 import { HomeComponent } from "./pages/home/home.component";
@@ -20,7 +25,8 @@ import { HeaderComponent } from "./components/header/header.component";
 import { SearchComponent } from "./components/search/search.component";
 import { ListComponent } from "./components/list/list.component";
 import { FormComponent } from "./components/form/form.component";
-import { CardComponent } from './components/card/card.component';
+import { CardComponent } from "./components/card/card.component";
+import { FormDialogComponent } from "./components/form-dialog/form-dialog.component";
 
 @NgModule({
   declarations: [
@@ -30,10 +36,13 @@ import { CardComponent } from './components/card/card.component';
     SearchComponent,
     ListComponent,
     FormComponent,
-    CardComponent
+    CardComponent,
+    FormDialogComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
@@ -45,7 +54,10 @@ import { CardComponent } from './components/card/card.component';
     MatInputModule,
     MatFormFieldModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [FormDialogComponent]
 })
 export class AppModule {}
