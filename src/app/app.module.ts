@@ -19,6 +19,11 @@ import {
   ShowOnDirtyErrorStateMatcher
 } from "@angular/material";
 import { MatFormFieldModule } from "@angular/material/form-field";
+
+// mask
+import {NgxMaskModule, IConfig} from 'ngx-mask';
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = {}
+
 // Components do App
 import { HomeComponent } from "./pages/home/home.component";
 import { HeaderComponent } from "./components/header/header.component";
@@ -52,7 +57,8 @@ import { FormDialogComponent } from "./components/form-dialog/form-dialog.compon
     MatCardModule,
     MatDialogModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    NgxMaskModule.forRoot(options)
   ],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }

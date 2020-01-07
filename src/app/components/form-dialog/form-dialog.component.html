@@ -8,6 +8,7 @@
       matInput
       placeholder="Nome completo"
       required
+      cdkFocusInitial
     />
     <mat-icon matSuffix>account_box</mat-icon>
   </mat-form-field>
@@ -29,7 +30,8 @@
     <mat-label>Celular</mat-label>
     <input
       type="tel"
-      formControlName="tel"
+      formControlName="tel"      
+      mask='(00) 0 0000-0000'
       [errorStateMatcher]="matcher"
       matInput
       placeholder="Telefone Celular"
@@ -44,7 +46,7 @@
     <mat-icon class="redIcon" matPrefix>close</mat-icon>
     Cancelar
   </button>
-  <button mat-button (click)="save()" [disabled]="!form.valid" cdkFocusInitial>
+  <button mat-button (click)="save()" [disabled]="!form.valid">
     Salvar
     <mat-icon class="greenIcon" matSuffix>check</mat-icon>
   </button>

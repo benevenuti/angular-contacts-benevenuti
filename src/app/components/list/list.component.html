@@ -2,7 +2,7 @@
   <span *ngFor="let contact of contacts; index as i">
     <mat-icon matPrefix>face</mat-icon>
     {{ contact.name }} - {{ contact.email }} -
-    {{ contact.tel }}
+    {{ contact.tel | mask: '(00) 0 0000-0000'}}
     <button mat-icon-button color="primary" (click)="doEdit(contact)">
       <mat-icon>edit</mat-icon>
     </button>
