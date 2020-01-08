@@ -16,13 +16,15 @@ import { MatDialogModule } from "@angular/material/dialog";
 import {
   MatInputModule,
   ErrorStateMatcher,
-  ShowOnDirtyErrorStateMatcher
+  ShowOnDirtyErrorStateMatcher,
+  MatSortModule,
+  MatTableModule
 } from "@angular/material";
 import { MatFormFieldModule } from "@angular/material/form-field";
 
 // mask
-import {NgxMaskModule, IConfig} from 'ngx-mask';
-export const options: Partial<IConfig> | (() => Partial<IConfig>) = {}
+import { NgxMaskModule, IConfig } from "ngx-mask";
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
 // Components do App
 import { HomeComponent } from "./pages/home/home.component";
@@ -58,6 +60,8 @@ import { FormDialogComponent } from "./components/form-dialog/form-dialog.compon
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSortModule,
+    MatTableModule,
     NgxMaskModule.forRoot(options)
   ],
   providers: [
