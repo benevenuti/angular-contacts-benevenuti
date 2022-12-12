@@ -24,7 +24,7 @@ export class ListComponent implements OnInit {
 
   dataSource = new MatTableDataSource(this.contacts);
 
-  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatSort) sort: MatSort;
   ngOnInit(): void {
     this.dataSource.data = this.contacts;
     this.dataSource.sort = this.sort;
