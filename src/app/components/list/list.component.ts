@@ -4,8 +4,8 @@ import {
   Input,
   Output,
   EventEmitter,
-  ViewChild,
-  SimpleChanges
+  ViewChild
+
 } from "@angular/core";
 import { Contact } from "src/classes/Contact";
 import { MatSort } from "@angular/material/sort";
@@ -23,12 +23,13 @@ export class ListComponent implements OnInit {
   @Output() editContactEvent: EventEmitter<Contact> = new EventEmitter();
   @Output() deleteContactEvent: EventEmitter<Contact> = new EventEmitter();
 
-  dataSource = new MatTableDataSource(this.contacts);
+  dataSource = new MatTableDataSource();
 
   @ViewChild(MatSort) sort: MatSort;
   ngOnInit(): void {
     this.dataSource.data = this.contacts;
     this.dataSource.sort = this.sort;
+    this.dataSource = new MatTableDataSource(this.contacts);
   }
 
   doEdit(contact: Contact): void {
