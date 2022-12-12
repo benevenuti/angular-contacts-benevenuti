@@ -64,7 +64,6 @@ import { FormDialogComponent } from "./components/form-dialog/form-dialog.compon
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
   ],
-  bootstrap: [AppComponent],
-  entryComponents: [FormDialogComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
