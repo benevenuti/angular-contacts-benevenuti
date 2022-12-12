@@ -23,7 +23,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets", "src/_redirects"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/_redirects"
+            ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
@@ -81,5 +85,8 @@
       }
     }
   },
-  "defaultProject": "angular-contacts-benevenuti"
+  "defaultProject": "angular-contacts-benevenuti",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { Contact } from "src/classes/Contact";
-import { MAT_RADIO_DEFAULT_OPTIONS_FACTORY } from "@angular/material";
 
 const CONTACTS = "contacts";
 

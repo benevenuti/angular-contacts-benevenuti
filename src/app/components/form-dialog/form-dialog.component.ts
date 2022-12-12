@@ -2,7 +2,7 @@ import { Component, Inject, Optional, OnInit } from "@angular/core";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Contact } from "src/classes/Contact";
-import { ShowOnDirtyErrorStateMatcher } from "@angular/material";
+import { ShowOnDirtyErrorStateMatcher } from "@angular/material/core";
 
 @Component({
   selector: "app-form-dialog",
