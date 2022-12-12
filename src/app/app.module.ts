@@ -13,13 +13,10 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
 import { MatDialogModule } from "@angular/material/dialog";
-import {
-  MatInputModule,
-  ErrorStateMatcher,
-  ShowOnDirtyErrorStateMatcher,
-  MatSortModule,
-  MatTableModule
-} from "@angular/material";
+import { MatInputModule } from "@angular/material/input";
+import { MatSortModule } from "@angular/material/sort";
+import { MatTableModule } from "@angular/material/table";
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher} from "@angular/material/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
 
 // mask
