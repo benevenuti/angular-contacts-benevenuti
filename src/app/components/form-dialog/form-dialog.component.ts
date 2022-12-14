@@ -1,6 +1,6 @@
 import { Component, Inject, Optional, OnInit } from "@angular/core";
 import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 import { Contact } from "src/classes/Contact";
 import { ShowOnDirtyErrorStateMatcher } from "@angular/material/core";
 
@@ -10,11 +10,11 @@ import { ShowOnDirtyErrorStateMatcher } from "@angular/material/core";
   styleUrls: ["./form-dialog.component.scss"]
 })
 export class FormDialogComponent implements OnInit {
-  form: FormGroup;
+  form: UntypedFormGroup;
   matcher = new ShowOnDirtyErrorStateMatcher();
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     public dialogRef: MatDialogRef<FormDialogComponent>,
     @Optional() @Inject(MAT_DIALOG_DATA) { id, name, email, tel }: Contact
   ) {
