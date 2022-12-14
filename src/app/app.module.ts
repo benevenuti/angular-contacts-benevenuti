@@ -8,16 +8,16 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 // Material
 import { MatIconModule } from "@angular/material/icon";
-import { MatLegacyButtonModule as MatButtonModule } from "@angular/material/legacy-button";
+import { MatButtonModule } from "@angular/material/button";
 import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatLegacyListModule as MatListModule } from "@angular/material/legacy-list";
-import { MatLegacyCardModule as MatCardModule } from "@angular/material/legacy-card";
-import { MatLegacyDialogModule as MatDialogModule } from "@angular/material/legacy-dialog";
-import { MatLegacyInputModule as MatInputModule } from "@angular/material/legacy-input";
+import { MatListModule } from "@angular/material/list";
+import { MatCardModule } from "@angular/material/card";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatInputModule } from "@angular/material/input";
 import { MatSortModule } from "@angular/material/sort";
-import { MatLegacyTableModule as MatTableModule } from "@angular/material/legacy-table";
+import { MatTableModule } from "@angular/material/table";
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher} from "@angular/material/core";
-import { MatLegacyFormFieldModule as MatFormFieldModule } from "@angular/material/legacy-form-field";
+import { MatFormFieldModule } from "@angular/material/form-field";
 
 // mask
 import { NgxMaskModule, IConfig } from "ngx-mask";

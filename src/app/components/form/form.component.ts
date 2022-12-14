@@ -5,7 +5,7 @@ import {
   Output,
   EventEmitter
 } from "@angular/core";
-import { MatLegacyDialog as MatDialog, MatLegacyDialogConfig as MatDialogConfig } from "@angular/material/legacy-dialog";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { Contact } from "src/classes/Contact";
 import { FormDialogComponent } from "../form-dialog/form-dialog.component";
 import { ContactsService } from "src/app/services/contacts.service";
