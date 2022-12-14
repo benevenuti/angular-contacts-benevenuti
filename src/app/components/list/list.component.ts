@@ -9,7 +9,7 @@ import {
 } from "@angular/core";
 import { Contact } from "src/classes/Contact";
 import { MatSort } from "@angular/material/sort";
-import { MatTableDataSource } from "@angular/material/table";
+import { MatLegacyTableDataSource as MatTableDataSource } from "@angular/material/legacy-table";
 
 @Component({
   selector: "app-list",
