@@ -94,7 +94,6 @@
       }
     }
   },
-  "defaultProject": "angular-contacts-benevenuti",
   "cli": {
     "analytics": false
   }
