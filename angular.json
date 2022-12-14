@@ -66,20 +66,24 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
+            },
+            "development": {}
           },
-          "defaultConfiguration": ""
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-contacts-benevenuti:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "angular-contacts-benevenuti:build:production"
+            },
+            "development": {
+              "browserTarget": "angular-contacts-benevenuti:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
